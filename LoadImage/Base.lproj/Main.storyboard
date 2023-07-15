@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoadImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O20-Q0-UeK">
+                                <rect key="frame" x="20" y="79" width="390" height="729"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JCw-lS-IZ8">
+                                <rect key="frame" x="20" y="828" width="390" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1b-Ll-rV5">
+                                        <rect key="frame" x="0.0" y="0.0" width="190" height="50"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="HTTPS">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="19"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loadImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aOS-60-3m0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcA-RR-7rv">
+                                        <rect key="frame" x="200" y="0.0" width="190" height="50"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="NON HTTPS">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="19"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loadImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dVn-Uw-CDm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2J8-ip-GMG"/>
+                                </constraints>
+                            </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="kpf-fS-soz">
+                                <rect key="frame" x="196.66666666666666" y="447.66666666666669" width="37" height="37"/>
+                                <color key="color" red="0.99998933076858521" green="0.002884135115891695" blue="0.36590296030044556" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O20-Q0-UeK" secondAttribute="trailing" constant="20" id="6gl-7D-1MI"/>
+                            <constraint firstItem="JCw-lS-IZ8" firstAttribute="top" secondItem="O20-Q0-UeK" secondAttribute="bottom" constant="20" id="DPz-AG-hoQ"/>
+                            <constraint firstItem="kpf-fS-soz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GiX-4T-xV1"/>
+                            <constraint firstItem="kpf-fS-soz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XtB-IE-IwT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JCw-lS-IZ8" secondAttribute="trailing" constant="20" id="bnb-Kj-oGb"/>
+                            <constraint firstItem="JCw-lS-IZ8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fV7-KQ-r7a"/>
+                            <constraint firstItem="O20-Q0-UeK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="hvn-Cr-OWk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JCw-lS-IZ8" secondAttribute="bottom" constant="20" id="i2H-fy-sCA"/>
+                            <constraint firstItem="O20-Q0-UeK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="w49-zk-qPP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="kpf-fS-soz" id="o15-6m-GgJ"/>
+                        <outlet property="myImageView" destination="O20-Q0-UeK" id="jQH-1C-lhT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
